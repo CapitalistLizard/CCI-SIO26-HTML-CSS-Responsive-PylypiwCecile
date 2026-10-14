@@ -24,4 +24,4 @@
 - L'encodage est déclaré avec la balise <meta> et l'attribut "charset", le UTF-8 est un type d'encodage des caractères relativement universel en HTML qui permet d'afficher les accents, entre autres.
 - Le titre de l'onglet est déclaré avec la balise <title> dans le <head> indiquant les attributs de la page HTML.
 - Le tire principal visible est indiqué avec la balise h1
-- Les paragraphes sont indiqués par la balise <p>. J'ai rajouté le br pour sauter une ligne.
+- Les paragraphes sont indiqués par la balise p. J'ai rajouté le br pour sauter une ligne.
