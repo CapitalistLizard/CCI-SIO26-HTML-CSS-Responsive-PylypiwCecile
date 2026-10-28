@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+    <head> 
+        <meta charset="UTF-8">
+        <title>La commande ping</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <!--Page rédigée par Cécile Pylypiw-Staub-->
+        <h1>La commande ping</h1>
+        <p>La commande ping permet de vérifier qu’une machine est joignable sur un réseau. Elle envoie de petits paquets de données à une adresse et mesure le temps de réponse.</p>
+        <h2>Syntaxe</h2>
+        <p>La syntaxe de base est « ping » suivie d’une adresse IP ou d’un nom de domaine, par exemple « ping 192.168.1.1 » ou « ping exemple.com ».</p>
+        <h2>Options courantes</h2>
+        <ul>
+            <li>-c (Linux/macOS) ou -n (Windows) : définit le nombre de paquets à envoyer.</li>
+            <li>-t (Windows) : envoie des paquets en continu jusqu’à l’arrêt manuel.</li>
+            <li>-s (Linux) ou -l (Windows) : modifie la taille des paquets envoyés.</li>
+            <li>-4 ou -6 : force l’utilisation d’IPv4 ou d’IPv6.</li>
+        </ul>
+        <h2>Utilisation pas à pas</h2>
+        <ol>
+            <li>Ouvrez un terminal ou l’invite de commandes.</li>
+            <li>Tapez « ping » suivi de l’adresse à tester.</li>
+            <li>Appuyez sur Entrée et observez les réponses.</li>
+            <li>Lisez les résultats : temps de réponse et pourcentage de paquets perdus.</li>
+        </ol>
+        <p><strong>Attention : certains pare-feu bloquent les réponses au ping, l’absence de réponse ne signifie donc pas toujours que la machine est éteinte.</strong></p>
+        <h3>Tester le réseau local</h3>
+        <p>Pour tester le réseau local, envoyez un ping vers la passerelle (souvent la box) ou vers un autre appareil du réseau. Si les réponses arrivent, la connexion locale fonctionne.</p>
+        <h3>Tester Internet</h3>
+        <p>Pour tester Internet, envoyez un ping vers un serveur connu, comme « 8.8.8.8 » ou « google.com ». Si l’adresse IP répond mais pas le nom de domaine, le problème vient probablement du DNS.</p>
+    </body>
+</html>
