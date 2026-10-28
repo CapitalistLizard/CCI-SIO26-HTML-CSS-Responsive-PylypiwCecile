@@ -1,39 +1,69 @@
-# Exercice 3
+# Phase 5 - Exercice 3
 
-## Page de présentation d'un service informatique
+Ici nous allons corriger les erreurs de hiérarchie et de sémantique dans un document HTML.
+
+## Support - Extraits
+
+### Extrait A
 
 ```html
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Service informatique - lycée</title>
-    </head>
-    <body>
-        <!--Etudiant à l'origine de cette page : Cécile Pylypiw-Staub-->
-        <h1>Bonjour.</h1>
-        <p>
-            Le service informatique du lycée Saint-Jean-la-Mayonnaise est chargé de maintenir le parc informatique composé de 65 PC équipés de Windows 98, 28 minitels, 12 imprimantes et 1 machine à café. C'est beaucoup de travail, c'est pour cela que ce site n'a pas de page de contact.
-        </p>
-        <h2>Horaires d'ouverture</h2>
-        <ul>
-            <li>Lundi : fermé</li>
-            <li>Mardi : fermé</li>
-            <li>Mercredi : 11h30 - 11h45</li>
-            <li>Jeudi : fermé</li>
-            <li>Vendredi : fermé</li>
-        </ul>
-    </body>
-</html>
+<h1>Les réseaux</h1>
+<h3>Le modèle OSI</h3>
+<h3>Le modèle TCP/IP</h3>
 ```
 
-### Explications
+Ici, la hiérarchie des titres n'est pas respectée : on passe directement du `<h1>` au `<h3>`. ça peut perturber l'indexation et le référencement du site.
 
-- Pour déclarer le fait que le document est en HTML5, il faut indiquer le !DOCTYPE en tout début de document. La langue française est indiquée par l'attribut "lang" du tag <!--<html>-->, et l'encodage par l'attribut "charset" du tag `<meta>`.
-- Le titre d'onglet est indiqué par la balise `<title>` du `<head>`.
-- Les titres visibles utilisent les balises `<h1>` et `<h2>`. 
-- Les paragraphes utilisent les balises `<p>`. Pour les horaires d'ouverture, j'ai mis une liste à puces avec les balises `<li>` imbriquées dans un `<ul>`.
-- Pour que la page s'adapte à la largeur du viewport, selon si on dimensionne la fenêtre du navigateur ou si on consulte le site sur un téléphone, il faut ajouter une autre balise `<meta>` dans le `<head>` avec les attributs suivants : name="viewport" content="width=device-width, initial-scale=1.0".
-- Les commentaires en HTML sont indiqués entre `<!-- -->` 
-- L'indentation du code est facilitée par des logiciels comme VSCode ou VSCodium, mais il ne faut pas lésiner sur les sauts de ligne et les tabulations. 
+### Extrait B
+
+```html
+<h1>Guide du technicien</h1>
+<h1>Installation</h1>
+<h1>Configuration</h1>
+```
+
+Cet extrait utilise 3 titres `<h1>` à la suite, alors qu'un titre `<h1>` doit au mieux être utilisé une fois pour titrer toute la page. En plus dans cet exemple, les titres "installation" et "configuration" devraient être des titres `<h2>` car ils séparent les sujets du Guide du Technicien.
+
+### Extrait C
+
+```html
+<h2>Sauvegardes</h2>
+<h4>Sauvegarde complète</h4>
+<h4>Sauvegarde incrémentale</h4>
+<h1>Conclusion</h1>
+```
+
+La hiérarchie des titres n'a aucune logique. Les robots indexeurs ne vont rien comprendre à cette page et son classement SEO risque d'être compromis.
+
+### Extrait D 
+
+```html
+<h1>Serveur DNS</h1>
+<p><h2>Rôle du serveur</h2></p>
+<p>Il traduit les noms de domaine en adresses IP.</p>
+```
+
+Ici, le titre `<h2>` se trouve dans une balise `<p>`. Ce n'est pas une bonne pratique, la page ne passera pas la validation W3C et la balise `<p>` indiquant un paragraphe, un titre n'a rien à faire dedans.
+
+### Extrait E
+
+```html
+<h1>Procédure de mise à jour</h1>
+<h2>Attention : ne pas éteindre le serveur pendant la mise à jour</h2>
+<ol>
+  <li>Lancer la mise à jour.</li>
+  <li>Attendre la fin du traitement.</li>
+</ol>
+```
+
+Le texte contenu dans la balise `<h2>` n'est pas supposé être un titre. Il aurait mieux fallu le mettre dans un `<p>`.
+
+## Support - situations
+
+| Situation                                                    | Code                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Présenter les étapes à suivre pour configurer une adresse IP statique. | `<ol><li>Ouvrez les paramètres réseau.</li><li>Désactivez le DHCP.</li><li>Saisissez l’adresse, le masque et la passerelle.</li><li>Validez et testez.</li></ol>` |
+| Énumérer les ports courants d'un serveur web (80, 443, 22, 25), sans ordre particulier. | `<ul><li>Port 80</li><li>Port 443</li><li>Port 22</li><li>Port 25</li></ul>` |
+| Mettre en évidence l'avertissement « Ne jamais exécuter cette commande en production ». | `<p><strong>Ne jamais exécuter cette commande en production</strong></p>` |
+| Insister sur le mot « avant » dans la phrase « Sauvegardez avant de modifier ». | `<p>Sauvegardez <b>avant</b> de modifier</p>`                |
+
