@@ -30,10 +30,10 @@
 
 ### Explications
 
-- Pour déclarer le fait que le document est en HTML5, il faut indiquer le !DOCTYPE en tout début de document. La langue française est indiquée par l'attribut "lang" du tag <html>, et l'encodage par l'attribut "charset" du tag "meta".
-- Le titre d'onglet est indiqué par la balise <title> du <head>.
-- Les titres visibles utilisent les balises h1 et h2. 
-- Les paragraphes utilisent les balises p. Pour les horaires d'ouverture, j'ai mis une liste à puces avec les balises <li> imbriquées dans un <ul>.
-- Pour que la page s'adapte à la largeur du viewport, selon si on dimensionne la fenêtre du navigateur ou si on consulte le site sur un téléphone, il faut ajouter une autre balise <meta> dans le <head> avec les attributs suivants : name="viewport" content="width=device-width, initial-scale=1.0".
-- Les commentaires en HTML sont indiqués entre <!-- --> 
+- Pour déclarer le fait que le document est en HTML5, il faut indiquer le !DOCTYPE en tout début de document. La langue française est indiquée par l'attribut "lang" du tag <!--<html>-->, et l'encodage par l'attribut "charset" du tag `<meta>`.
+- Le titre d'onglet est indiqué par la balise `<title>` du `<head>`.
+- Les titres visibles utilisent les balises `<h1>` et `<h2>`. 
+- Les paragraphes utilisent les balises `<p>`. Pour les horaires d'ouverture, j'ai mis une liste à puces avec les balises `<li>` imbriquées dans un `<ul>`.
+- Pour que la page s'adapte à la largeur du viewport, selon si on dimensionne la fenêtre du navigateur ou si on consulte le site sur un téléphone, il faut ajouter une autre balise `<meta>` dans le `<head>` avec les attributs suivants : name="viewport" content="width=device-width, initial-scale=1.0".
+- Les commentaires en HTML sont indiqués entre `<!-- -->` 
 - L'indentation du code est facilitée par des logiciels comme VSCode ou VSCodium, mais il ne faut pas lésiner sur les sauts de ligne et les tabulations. 
