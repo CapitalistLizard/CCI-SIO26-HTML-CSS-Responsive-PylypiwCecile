@@ -1,0 +1,35 @@
+p{
+    color: #404040;
+}
+
+.important{
+    font-weight: bold;
+}
+
+#entete{
+    background-color: #001a66;
+}
+
+h1, h2{
+    font-family: sans-serif;
+}
+
+p.important{
+    color: red;
+}
+
+.actif{
+    color: orangered;
+}
+
+footer p{
+    font-size: small;
+}
+
+#agenda li{
+    color: green;
+}
+
+.important.rappel{
+    font-style: italic;
+}
